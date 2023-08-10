@@ -1,5 +1,5 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: #48BEDA;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -17,16 +17,12 @@
     height: 80px;
     max-width: 1500px;
   }
-  
-  .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
+
+  .logo_image {
+      height: 80%;
+      width: 12%;
+      cursor: pointer;
+      justify-self: start;
   }
   
   .fa-typo3 {
@@ -56,13 +52,43 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
+    position: relative;
   }
   
-  .nav-links:hover {
+  /*.nav-links:hover {
     border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
-  }
-  
+  }*/
+
+  .nav-links:before,
+.nav-links:after 
+{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    transition: 0.4s;
+}
+
+.nav-links:after 
+{
+    left: 0;
+    bottom: 14px;
+}
+
+.nav-links:before
+{
+    left: 0;
+    top: 16px;
+}
+ 
+.nav-links:hover:after,
+.nav-links:hover:before
+{
+width: 100%;
+}
+
   .fa-bars {
     color: #fff;
   }
@@ -84,7 +110,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 60vh;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -93,12 +119,19 @@
     }
   
     .nav-menu.active {
-      background: #242222;
+      background: linear-gradient(90deg, #48BEDA 0%, #398091 100%);
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
     }
+
+    .logo_image {
+      height: 80%;
+      width: 100%;
+      cursor: pointer;
+      justify-self: start;
+  }
   
     .nav-links {
       text-align: center;
@@ -107,9 +140,15 @@
       display: table;
     }
   
+    .nav-links:before,
+    .nav-links:after 
+    {
+      display: none;
+    }
+
     .nav-links:hover {
       background-color: #fff;
-      color: #242424;
+      color: #48BEDA;
       border-radius: 0;
     }
   
@@ -152,7 +191,7 @@
   
     .nav-links-mobile:hover {
       background: #fff;
-      color: #242424;
+      color: #48BEDA;
       transition: 250ms;
     }
   }

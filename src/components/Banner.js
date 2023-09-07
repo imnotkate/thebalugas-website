@@ -10,7 +10,7 @@ function Banner() {
         <h2>New Single</h2>
         <h2>"One Night"</h2>
     <div className='banner-btn'>
-        <Button className="btn" buttonStyles='btn--outline' buttonSize='btn--large'>Stream</Button>
+        <Button className="btn" buttonStyles='btn--outline' buttonSize='btn--large'>Stream Now</Button>
     </div>
     </div>
   )
